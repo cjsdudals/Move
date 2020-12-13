@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">		
+        <title>MOVE</title>
+		<link rel="shortcut icon" href="/images/favicon.png">
+		<!-- <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"> -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="/stylesheets/start_s.css">
+
+		<!--하이퍼링크 액션 없애주기-->
+		<style type="text/css">
+		a {color:none; text-decoration: none;}
+		
+		</style>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="./images/respond.min.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">        
+		<![endif]-->
+	</head>
+
+	<body style="margin:0px;">
+		<!--header-->
+		<header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+                  <a class="navbar-brand" href="/student" style="color:#626262;">MOVE</a>
+				</div>
+				<div class="collapse navbar-col lapse">
+				</div><!-- /.nav-collapse -->
+			</div><!-- /.container -->
+			<form method='post'>
+				<div class="logout">
+					<button id="logoutbtn" type="submit">로그아웃</button>
+				</div>
+			</form>
+		</header><!-- /.navbar -->
+		
+		<!--main-->
+		<div class="main" style="margin-top:120px">
+            <div class="sign">
+                <img src="/images/일러스트_체크.png" id="ill" href="">
+                <a id="text" href="/student/putin">실 신청하기</a>
+            </div>
+            <div class="sign">
+                <img src="/images/일러스트_반관리.png" id="ill" href="">
+                <a id="text" href="/student/class">반 관리하기</a> <!--반장만 권한 ㅇ-->
+            </div>
+		</div><!--/.container-->
+		
+		
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script src="/javascripts/bootstrap.min.js"></script>
+		<script src="/javascripts/style.js"></script>		
+	</body>
+</html>

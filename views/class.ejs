@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">		
+		<title>MOVE</title>
+		<link rel="shortcut icon" href="/images/favicon.png">
+		<!-- <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"> -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="/stylesheets/class.css">
+
+		<!--하이퍼링크 액션 없애주기-->
+		<style type="text/css">
+		a {color:none; text-decoration: none;}
+		
+		</style>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="./images/respond.min.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">        
+		<![endif]-->
+	</head>
+
+	<body>
+		<!--header-->
+		<header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="/" style="color:#626262;">MOVE</a>
+				</div>
+				<div class="collapse navbar-collapse">
+				</div><!-- /.nav-collapse -->
+			</div><!-- /.container -->
+		</header><!-- /.navbar -->
+		
+		<!--main-->
+		<div class="container">
+				<div class="main-l">
+                    <h1 id="title">총 인원</h1><br>
+                    <h2 id="text"><%= total %></h2>
+                </div>
+                <div class="main-r">
+                    <h1 id="title">현재 인원</h1><br>
+                    <h2 id="text"><%= now %></h2>
+                </div>
+		</div><!--/.container-->
+		
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script src="/javascripts/bootstrap.min.js"></script>
+		<script src="/javascripts/style.js"></script>		
+	</body>
+</html>

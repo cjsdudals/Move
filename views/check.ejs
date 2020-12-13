@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">		
+		<title>MOVE</title>
+		<link rel="shortcut icon" href="/images/favicon.png">
+		<!-- <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"> -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="/stylesheets/check.css">
+
+		<!--하이퍼링크 액션 없애주기-->
+		<style type="text/css">
+		a {color:none; text-decoration: none;}
+		</style>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="./images/respond.min.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">        
+		<![endif]-->
+	</head>
+
+	<body>
+		<!--header-->
+		<header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+                  <a class="navbar-brand" href="/teacher" style="color:#626262;">MOVE</a>
+                  <a class="navbar-brand-little" href="/teacher" style="color:#AB65F3">for teacher</a>
+				</div>
+				<div class="collapse navbar-collapse">
+				</div><!-- /.nav-collapse -->
+			</div><!-- /.container -->
+		</header><!-- /.navbar -->
+		
+		<!--main-->
+		<div class="container">
+            <div class="left">
+				<div class="headline">
+					<a style="font-size: 30px;"><%= represent[0] %></a><a>외 <%= people[0] %>명</a>
+				</div>
+				
+				<div class="box">
+					<h2 style="margin-bottom:0;"><%= room[0] %></h2>
+					<a style="margin-bottom:10px;">대여시간 <%= time[0] %>/대여사유 <%= reason[0] %></a><br>
+					
+					<div class="box2">
+						<% for(var i = 0;i < grade[0].length; i++){ %>
+							<a class="names"><%= grade[0][i] %> <%= name[0][i] %></p>
+						<% } %>
+						<form method="POST">
+							<button class="btn" name="certify" type="submit" value="1,false">거절하기</button>
+							<button class="btn" name="certify" type="submit" value="1,true">승인하기</button>
+						</form>
+					</div>
+				</div>
+			</div>		
+            <div class="right">
+                <div class="headline">
+					<a style="font-size: 30px;"><%= represent[1] %></a><a>외 <%= people[1] %>명</a>
+				</div>
+				
+				<div class="box">
+					<h2 style="margin-bottom:0;"><%= room[1] %></h2>
+					<a style="margin-bottom:10px;">대여시간 <%= time[1] %>/대여사유 <%= reason[1] %></a><br>
+					
+					<div class="box2">
+						<% for(var i = 0;i <= grade[1].length; i++){ %>
+							<a class="names"><%= grade[1][i] %> <%= name[1][i] %></p>
+							<% } %>
+					<form method="POST">
+						<button class="btn" name="certify" type="submit" value="2,false">거절하기</button>
+						<button class="btn" name="certify" type="submit" value="2,true">승인하기</button>
+					</form>
+					</div>
+				</div>
+            </div>
+            <div class="left">
+                <div class="headline">
+					<a style="font-size: 30px;"><%= represent[2] %></a><a>외 <%= people[2] %>명</a>
+				</div>
+				
+				<div class="box">
+					<h2 style="margin-bottom:0;"><%= room[2] %></h2>
+					<a style="margin-bottom:10px;">대여시간 <%= time[2] %>/대여사유 <%= reason[2] %></a><br>
+					
+					<div class="box2">
+						<% for(var i = 0;i < grade[2].length; i++){ %>
+							<a class="names"><%= grade[2][i] %> <%= name[2][i] %></p>
+							<% } %>
+						<form method="POST">
+							<button class="btn" name="certify" type="submit" value="3,false">거절하기</button>
+							<button class="btn" name="certify" type="submit" value="3,true">승인하기</button>
+						</form>
+					</div>
+				</div>
+            </div>
+            <div class="right">
+                <div class="headline">
+					<a style="font-size: 30px;"><%= represent[3] %></a><a>외 <%= people[3] %>명</a>
+				</div>
+				
+				<div class="box">
+					<h2 style="margin-bottom:0;"><%= room[3] %></h2>
+					<a style="margin-bottom:10px;">대여시간 <%= time[3] %>/대여사유 <%= reason[3] %></a><br>
+					
+					<div class="box2">
+						<% for(var i = 0;i < grade[3].length; i++){ %>
+						<a class="names"><%= grade[3][i] %> <%= name[3][i] %></p>
+						<% } %>
+						<form method="POST">
+							<button class="btn" name="certify" type="submit" value="4,false">거절하기</button>
+							<button class="btn" name="certify" type="submit" value="4,true">승인하기</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+		</div><!--/.container-->
+		
+		
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script src="/javascripts/bootstrap.min.js"></script>
+		<script src="/javascripts/style.js"></script>		
+	</body>
+</html>

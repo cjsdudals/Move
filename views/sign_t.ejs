@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">		
+		<title>MOVE</title>
+		<link rel="shortcut icon" href="/images/favicon.png">
+		<!-- <link rel="stylesheet" href="./images/bootstrap.min.css"> -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="/stylesheets/signin_t.css">
+
+		<!--하이퍼링크 액션 없애주기-->
+		<style type="text/css">
+		a {color:none; text-decoration: none;}
+		
+		</style>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="./images/respond.min.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">        
+		<![endif]-->
+	</head>
+
+	<body style="margin:0px;">
+		<!--header-->
+		<% if(message){ %>
+			<script>alert('동일한 이메일이 있습니다.');</script>
+		<% } else if(wrongPass){ %>
+			<script>alert('비밀번호가 다릅니다.')</script>	
+		<% } %>
+		<header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="/users/login" style="color:#626262;">MOVE</a>
+				</div>
+				<div class="collapse navbar-col lapse">
+				</div><!-- /.nav-collapse -->
+			</div><!-- /.container -->
+		</header><!-- /.navbar -->
+		
+		<!--main-->
+		<div class="main">
+				<label for="input" class="signbox"></label>
+				<!--form-->
+				<form method="post">
+					<div class="email">
+						<input type="email" id="input" name="email" class="form" placeholder="  이메일주소" required autofocus>
+                    <input type="text" id="input" name="name" class="form-control" placeholder="  이름" required autofocus>
+					<select name="room" id="select">
+						<option value="">담당 실 선택</option>
+						<option value="1층 응용프로그램 개발1실">1층 응용프로그램 개발1실</option>
+                        <option value="1층 응용프로그램 개발2실">1층 응용프로그램 개발2실</option>
+                        <option value="2층홈베이스">2층홈베이스</option>
+                        <option value="2층 네트워크프로그래밍실습실">2층 네트워크프로그래밍실습실</option>
+                        <option value="2층 시스템프로그래밍실습실">2층 시스템프로그래밍실습실</option>
+                        <option value="3층홈베이스">3층홈베이스</option>
+                        <option value="3층 마이크로프로세서 1실">3층 마이크로프로세서 1실</option>
+                        <option value="3층 마이크로프로세서 2실">3층 마이크로프로세서 2실</option>
+                        <option value="3층 프로그래밍 실습2실">3층 프로그래밍 실습2실</option>
+                        <option value="4층홈베이스">4층홈베이스</option>
+                        <option value="4층 프로그래밍 실습1실">4층 프로그래밍 실습1실</option>
+                        <option value="학년실">학년실</option>
+					</select>
+					
+					</div>
+					<input type="password" id="input" name="password" class="form-control" placeholder="  비밀번호" required autofocus>
+					<input type="password" id="input" name="re_password" class="form-control" placeholder="  비밀번호 재확인" required autofocus>
+					<button class="btn" type="submit">가입하기</button>
+				</form><!--form-->
+				
+		</div><!--/.container-->
+		
+		
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script src="/javascripts/bootstrap.min.js"></script>
+		<script src="/javascripts/style.js"></script>		
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">		
+		<title>MOVE</title>
+		<link rel="shortcut icon" href="/images/favicon.png">
+		<!-- <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"> -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="/stylesheets/signin.css">
+
+		<!--하이퍼링크 액션 없애주기-->
+		<style type="text/css">	
+		a {color:none; text-decoration: none;}
+		
+		</style>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="./images/respond.min.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">        
+		<![endif]-->
+	</head>
+
+	<body style="margin:0px;">
+		<% if(message){ %>
+			<script>alert('동일한 이메일이 있습니다.');</script>
+		<% } else if(wrongPass){ %>
+			<script>alert('비밀번호가 다릅니다.')</script>	
+		<% } %>
+		<!--header-->
+		<header class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="/users/login" style="color:#626262;">MOVE</a>
+				</div>
+				<div class="collapse navbar-col lapse">
+				</div><!-- /.nav-collapse -->
+			</div><!-- /.container -->
+		</header><!-- /.navbar -->
+		
+		<!--main-->
+		<div class="main">
+				<!--form-->
+				<label for="input" class="signbox"></label>
+				<form method="post">
+					<div class="email">
+						<input type="email" name="email" id="input" class="form" placeholder="  이메일주소" required autofocus>
+					</div>
+
+					<input type="text" name="name" id="input" class="form-control" placeholder="  이름" required autofocus>
+					<div class="select">
+						<select name="grade" id="">
+							<option value="">학년선택</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						<a>학년</a>
+						<select name="cla" id="">
+							<option value="">반선택</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<a>반</a>
+						<a>번호</a>
+						<select name="num" id="">
+							<option value="">번호선택</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+						</select>
+					</div>
+					<input type="password" name="password" id="input" class="form-control" placeholder="  비밀번호" required autofocus>
+					<input type="password" name="re_password" id="input" class="form-control" placeholder="  비밀번호 재확인" required autofocus>
+					<button class="btn" type="submit">가입하기</button>
+				</form><!--form-->
+				
+		</div><!--/.container-->
+		
+		
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script src="/javascripts/bootstrap.min.js"></script>
+		<script src="/javascripts/style.js"></script>		
+		<script src="/javascripts/mail.js"></script>
+	</body>
+</html>
