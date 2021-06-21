@@ -19,16 +19,28 @@ router.get('/auth', function(req, res, next){
       console.log(error);
     }
     else{
-      sql = `UPDATE account SET auth='true' WHERE email="${email}"`;
-      connection.query(sql, function(error, result, fields){
-        if(error){
-          console.log(error);
-        }
-        else{
-          res.send(`<div>인증이 완료되었습니다.</div>
-          <a href="/">로그인 화면으로 돌아가기</a>`);
-        }
-      });
+      try {
+        var authNum = result[0]['authNum'];
+        
+        if(authNum == token){
+        sql = `UPDATE account SET auth='true' WHERE email="${email}"`;
+        connection.query(sql, function(error, result, fields){
+          if(error){
+            console.log(error);
+          }
+          else{
+            res.send(`<div>인증이 완료되었습니다.</div>
+            <a href="/">로그인 화면으로 돌아가기</a>`);
+          }
+        });
+      }
+      else{
+        res.send(`<div>인증에 실패하였습니다.</div>
+        <a href"/">로그인 화면으로 돌아가기<a>`);
+      }
+      } catch (error) {
+        res.redirect('/');
+      }
     }
   });
 
